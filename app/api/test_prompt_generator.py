@@ -6,7 +6,6 @@ router = APIRouter()
 
 
 @router.get("/prompt")
-
 def generate_prompt():
 
     prompt = prompt_generator.generate(

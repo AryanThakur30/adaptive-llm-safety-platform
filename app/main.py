@@ -3,12 +3,15 @@ from pydantic import BaseModel
 
 from app.core.config import settings
 from app.services.experiment_service import experiment_service
+from app.api.test_prompt_generator import router as prompt_router
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
     description="Adaptive LLM Safety Evaluation Platform",
     version="1.0.0"
 )
+
+app.include_router(prompt_router)
 
 
 class PromptRequest(BaseModel):
