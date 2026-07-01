@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+pgvector
+pydantic
+python-dotenv
+requests
+httpx
+ollama
+alembic
+langgraph
+langchain
+langchain-community
+prometheus-client
+python-multipart
