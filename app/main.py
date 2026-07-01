@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 
 from app.core.config import settings
-from app.services.llm_service import llm_service
+from app.services.experiment_service import experiment_service
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -25,10 +25,4 @@ async def home():
 
 @app.post("/generate")
 async def generate(request: PromptRequest):
-
-    response = llm_service.generate(request.prompt)
-
-    return {
-        "prompt": request.prompt,
-        "response": response
-    }
+    return experiment_service.run(request.prompt)
