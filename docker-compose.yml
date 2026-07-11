@@ -1,0 +1,23 @@
+services:
+
+  adaptive-llm-safety-platform:
+
+    build:
+      context: .
+
+    container_name: adaptive-llm-safety-platform
+
+    ports:
+      - "8000:8000"
+
+    env_file:
+      - .env
+
+    volumes:
+      - .:/app
+
+    restart: unless-stopped
+
+    stdin_open: true
+
+    tty: true
