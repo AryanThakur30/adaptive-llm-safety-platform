@@ -1,238 +1,59 @@
+<div align="center">
+
 # 🛡️ Adaptive LLM Safety Evaluation Platform
 
-A production-ready AI security platform that evaluates Large Language Models (LLMs) against prompt injection and adversarial attacks. The platform automatically generates attack variants, evaluates model responses, assigns risk scores, stores experiment history, and provides a real-time analytics dashboard.
+### Production-Ready AI Safety Testing Platform for Large Language Models
+
+<p align="center">
+
+<img src="https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"/>
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white"/>
+<img src="https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=sqlalchemy&logoColor=white"/>
+<img src="https://img.shields.io/badge/Ollama-000000?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
+
+</p>
+
+<p align="center">
+
+<img src="https://img.shields.io/github/license/AryanThakur30/adaptive-llm-safety-platform?style=flat-square"/>
+<img src="https://img.shields.io/github/stars/AryanThakur30/adaptive-llm-safety-platform?style=flat-square"/>
+<img src="https://img.shields.io/github/forks/AryanThakur30/adaptive-llm-safety-platform?style=flat-square"/>
+<img src="https://img.shields.io/github/last-commit/AryanThakur30/adaptive-llm-safety-platform?style=flat-square"/>
+
+</p>
+
+> **An enterprise-ready platform for evaluating Large Language Models against adversarial prompts using automated attack strategies, dynamic risk scoring, PostgreSQL-backed experiment tracking, and Dockerized deployment.**
+
+</div>
 
 ---
 
 ## ✨ Features
 
-- 🔥 Prompt Injection Testing
-- 🛡️ LLM Safety Evaluation
-- 🤖 Ollama + Qwen2.5 Integration
-- 📊 Risk Scoring Engine
-- 📜 Experiment History
-- 🔍 Search & Filtering
-- 📈 Interactive Analytics Dashboard
-- 📥 CSV Export
-- 📥 JSON Export
-- 🐳 Docker Support
+- 🚀 Automated LLM Safety Evaluation
+- 🎯 Multiple Prompt Attack Strategies
+- 📊 Dynamic Risk Scoring
+- 🗄️ PostgreSQL-backed Experiment Storage
+- 📈 Analytics Dashboard
+- 🔍 Searchable Experiment History
+- 📂 CSV & JSON Export
 - ⚡ FastAPI REST APIs
-- 💾 SQLite Database
+- 🐳 Dockerized Deployment
+- 🧩 Modular Architecture
 
 ---
 
-## 🏗️ System Architecture
+## 🏗️ Tech Stack
 
-> Architecture diagram will be added soon.
-
-```text
-                User
-                  │
-                  ▼
-         Streamlit Dashboard
-                  │
-                  ▼
-             FastAPI Backend
-                  │
-      ┌───────────┼────────────┐
-      ▼           ▼            ▼
- SQLite DB    Ollama API   Safety Engine
-                  │
-                  ▼
-             Qwen2.5 Model
-```
+| Category | Technologies |
+|----------|--------------|
+| Backend | FastAPI |
+| Database | PostgreSQL |
+| ORM | SQLAlchemy |
+| LLM | Ollama (Qwen2.5) |
+| Containerization | Docker |
+| Language | Python |
 
 ---
-
-## 📂 Project Structure
-
-```text
-adaptive-llm-safety-platform/
-
-├── app/
-│   ├── agents/
-│   ├── api/
-│   ├── core/
-│   ├── database/
-│   ├── evaluator/
-│   ├── services/
-│   └── main.py
-│
-├── dashboard/
-│   └── app.py
-│
-├── datasets/
-│
-├── docs/
-│
-├── screenshots/
-│
-├── Dockerfile
-├── docker-compose.yml
-├── requirements.txt
-└── README.md
-```
-
----
-
-# 🚀 Tech Stack
-
-## Backend
-
-- FastAPI
-- SQLAlchemy
-- SQLite
-- Pydantic
-
-## AI
-
-- Ollama
-- Qwen2.5:7B
-
-## Dashboard
-
-- Streamlit
-- Plotly
-
-## DevOps
-
-- Docker
-- Docker Compose
-
----
-
-# ⚙️ Installation
-
-## Clone Repository
-
-```bash
-git clone https://github.com/AryanThakur30/adaptive-llm-safety-platform.git
-
-cd adaptive-llm-safety-platform
-```
-
----
-
-## Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## Run FastAPI
-
-```bash
-uvicorn app.main:app --reload
-```
-
-API Documentation:
-
-```
-http://127.0.0.1:8000/docs
-```
-
----
-
-## Run Streamlit Dashboard
-
-```bash
-streamlit run dashboard/app.py
-```
-
----
-
-## Docker
-
-### Build
-
-```bash
-docker compose build
-```
-
-### Run
-
-```bash
-docker compose up
-```
-
----
-
-# 📡 REST API
-
-| Method | Endpoint | Description |
-|---------|----------|-------------|
-| POST | `/generate` | Run safety evaluation |
-| GET | `/history` | List experiments |
-| GET | `/history/{id}` | Get experiment |
-| DELETE | `/history/{id}` | Delete experiment |
-| GET | `/stats` | Dashboard statistics |
-| GET | `/history/export/csv` | Export CSV |
-| GET | `/history/export/json` | Export JSON |
-
----
-
-# 📊 Dashboard
-
-The Streamlit dashboard provides:
-
-- Live Statistics
-- Experiment History
-- Search
-- Safety Distribution
-- Strategy Distribution
-- Risk Score Trend
-- Auto Refresh
-- CSV Export
-- JSON Export
-
----
-
-# 📸 Screenshots
-
-Coming Soon
-
-- Dashboard
-- Charts
-- Swagger UI
-- Docker
-- Architecture Diagram
-
----
-
-# 📈 Future Improvements
-
-- JWT Authentication
-- PostgreSQL Support
-- Redis Cache
-- Kubernetes Deployment
-- CI/CD Pipeline
-- Prometheus Integration
-- Grafana Monitoring
-- Multi-Model Evaluation
-- User Management
-- Role-Based Access Control
-
----
-
-# 👨‍💻 Author
-
-**Aryan Thakur**
-
-Computer Science Student  
-Delhi University
-
-GitHub
-
-https://github.com/AryanThakur30
-
----
-
-# 📄 License
-
-This project is licensed under the MIT License.
-
----
-
-## ⭐ If you found this project useful, consider giving it a star!
